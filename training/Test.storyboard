@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7bz-8J-2qy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test-->
+        <scene sceneID="4CF-Ss-qac">
+            <objects>
+                <viewController id="7bz-8J-2qy" customClass="Test" customModule="training" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vty-MQ-6JT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5t-mg-mrP">
+                                <rect key="frame" x="27.5" y="30" width="319" height="133.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tyo-PV-zny">
+                                <rect key="frame" x="27.5" y="171.5" width="319" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listcell" id="Wtv-4t-rSz">
+                                        <rect key="frame" x="0.0" y="28" width="319" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wtv-4t-rSz" id="UGm-LO-UbC">
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7bz-8J-2qy" id="zeW-7G-ecZ"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-4u-dQe">
+                                <rect key="frame" x="27.5" y="520" width="319" height="132"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f8Z-4u-dQe" firstAttribute="top" secondItem="tyo-PV-zny" secondAttribute="bottom" constant="15" id="3s9-px-PO2"/>
+                            <constraint firstItem="F5t-mg-mrP" firstAttribute="top" secondItem="KnS-ts-dqy" secondAttribute="top" constant="10" id="7tM-tC-FNd"/>
+                            <constraint firstItem="KnS-ts-dqy" firstAttribute="bottom" secondItem="f8Z-4u-dQe" secondAttribute="bottom" constant="15" id="Agb-LY-1fT"/>
+                            <constraint firstItem="F5t-mg-mrP" firstAttribute="height" secondItem="Vty-MQ-6JT" secondAttribute="height" multiplier="0.2" id="DUU-ec-j0v"/>
+                            <constraint firstItem="tyo-PV-zny" firstAttribute="width" secondItem="Vty-MQ-6JT" secondAttribute="width" multiplier="0.85" id="EQp-bJ-on7"/>
+                            <constraint firstItem="tyo-PV-zny" firstAttribute="height" secondItem="Vty-MQ-6JT" secondAttribute="height" multiplier="0.5" id="EpW-tq-19H"/>
+                            <constraint firstItem="f8Z-4u-dQe" firstAttribute="leading" secondItem="tyo-PV-zny" secondAttribute="leading" id="JCm-m4-yWO"/>
+                            <constraint firstItem="F5t-mg-mrP" firstAttribute="width" secondItem="tyo-PV-zny" secondAttribute="width" id="Ykt-CH-LN9"/>
+                            <constraint firstItem="f8Z-4u-dQe" firstAttribute="trailing" secondItem="tyo-PV-zny" secondAttribute="trailing" id="eqT-f9-mQ8"/>
+                            <constraint firstItem="tyo-PV-zny" firstAttribute="firstBaseline" secondItem="F5t-mg-mrP" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="mhy-nf-8SX"/>
+                            <constraint firstItem="tyo-PV-zny" firstAttribute="centerX" secondItem="KnS-ts-dqy" secondAttribute="centerX" id="uEd-aR-GNV"/>
+                            <constraint firstItem="F5t-mg-mrP" firstAttribute="centerX" secondItem="KnS-ts-dqy" secondAttribute="centerX" id="zhv-EA-uAu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KnS-ts-dqy"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="tyo-PV-zny" id="WNF-mx-C6O"/>
+                        <outlet property="testView" destination="F5t-mg-mrP" id="OCk-JB-7hE"/>
+                        <outlet property="testViewButton" destination="f8Z-4u-dQe" id="q7C-iZ-lNz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5N-7n-DZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="-21"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,15 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK: - Properties
+    private var _mabite : String?
+    
+    //MARK: - Init View
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        _ = MFCoreDataManager.shared.removeAllObjectsWith(entity: "Coin")
+        _ = MFCoreDataManager.shared.saveContext()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    //MARK: - Private method
 
 
 }
